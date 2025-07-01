@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>To My Venti 💛</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
@@ -74,34 +75,33 @@
 </head>
 <body>
   <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/03/26/audio_9b8e63ef96.mp3" type="audio/mpeg">
+    <source src="pipiliin.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
   <div class="card">
     <div class="page active">
-      <div class="title">To the One Who Feels Like Home — Venti 💛</div>
-      <p>(Tap to begin)</p>
+      <div class="title">To the One Who Feels Like Home <br>My Venti 💛</div>
     </div>
     <div class="page">
-      <p>There are people who pass by like seasons.<br>
-      But you... You stayed.<br>
-      You are my constant wind — gentle, warm, and always finding your way back to me.<br>
-      I breathe easier when I think of you.</p>
+      <p>Sa di nga naman inaasahang panahon meron tlagang darating na taong magpapapasaya sayo at ang taong yun ay ikaw mahal ko.<br>
+      You're the very first person that made me feel like this, you made me feel how to be loved at pinaramdam mo sakin that I can also be important to someone.<br>
+      And thank you for making me happy and for making me feel loved.</p>
     </div>
     <div class="page">
-      <p>It’s the way you say my name.<br>
-      The way your eyes soften when you smile.<br>
-      With you, even silence speaks love.</p>
+      <p>I love the way you smile.<br>
+      The way your eyes stares and smiles at me.<br>
+      I just love the way you are.<br>
+      And most of all I really really love you so much not because of your appearance but because of just the way you are.</p>
     </div>
     <div class="page">
       <p>I don’t know what tomorrow holds,<br>
-      but if it’s with you — I’ll walk into it bravely.<br>
-      You’re not just my present. You’re my dream.</p>
+      but if it’s with you, kaya kong harapin to kasama ka.<br>
+      You're not just a present from God for me, but you are my dream come true.</p>
     </div>
     <div class="page">
       <p>Forever your Kazuha 🥺💜<br>
-      To my Venti — You are my favorite feeling.</p>
+      To my Venti <br>You are my favorite feeling.</p>
     </div>
     <button onclick="nextPage()">Next ➜</button>
   </div>
@@ -109,7 +109,6 @@
   <script>
     const pages = document.querySelectorAll('.page');
     let current = 0;
-
     function nextPage() {
       pages[current].classList.remove('active');
       current = (current + 1) % pages.length;
