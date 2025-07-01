@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,8 +73,11 @@
   </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="https://benedictsusma.github.io/venti-love-card/pipiliin.mp3" type="audio/mpeg" />
+
+  <!-- Audio player -->
+  <audio id="bgMusic" loop>
+    <source src="./pipiliin.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
   </audio>
 
   <div class="card">
@@ -83,7 +85,7 @@
       <div class="title">To the One Who Feels Like Home <br>My Venti 💛</div>
     </div>
     <div class="page">
-      <p>Sa di nga naman inaasahang panahon meron tlagang darating na taong magpapapasaya sayo at ang taong yun ay ikaw mahal ko.<br>
+      <p>Sa di nga naman inaasahang panahon meron talagang darating na taong magpapasaya sayo at ang taong yun ay ikaw mahal ko.<br>
       You're the very first person that made me feel like this, you made me feel how to be loved at pinaramdam mo sakin that I can also be important to someone.<br>
       And thank you for making me happy and for making me feel loved.</p>
     </div>
@@ -102,16 +104,28 @@
       <p>Forever your Kazuha 🥺💜<br>
       To my Venti <br>You are my favorite feeling.</p>
     </div>
-    <button onclick="nextPage()">Next ➜</button>
+
+    <!-- Play button (optional backup if autoplay fails) -->
+    <button onclick="start()">Start & Next ➜</button>
   </div>
 
   <script>
     const pages = document.querySelectorAll('.page');
     let current = 0;
+    const audio = document.getElementById('bgMusic');
+
     function nextPage() {
       pages[current].classList.remove('active');
       current = (current + 1) % pages.length;
       pages[current].classList.add('active');
+    }
+
+    function start() {
+      // Play music on first interaction
+      audio.play().catch((err) => {
+        console.log("Autoplay failed, user interaction needed:", err);
+      });
+      nextPage();
     }
   </script>
 </body>
